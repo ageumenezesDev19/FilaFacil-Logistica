@@ -1,0 +1,12 @@
+node_modules/
+src/generated/
+data/
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+coverage/
+.DS_Store

@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+  moduleFormat = "esm"
+  importFileExtension = "ts"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Collection {
+  id                 Int      @id @default(autoincrement())
+  customerName       String
+  customerNameSearch String
+  address            String
+  packageCount       Int
+  priority           String
+  status             String   @default("PENDING")
+  createdAt          DateTime @default(now())
+
+  @@map("collections")
+}
